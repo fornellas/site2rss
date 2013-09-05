@@ -22,7 +22,7 @@ class KickstarterTechnology
           item['link'] = 'http://www.kickstarter.com/' + li.css('div.project-thumbnail').css('a')[0]['href']
           image = li.css('div.project-thumbnail').css('img')[0]['src']
           text = li.css('p.bbcard_blurb').text
-          item['description'] = '<a href="' + item['link'] + '">' + '<img align="top" alt="Proto-little" src="' + image + '">' + '</a><br>' + text
+          item['description'] = '<a href="' + item['link'] + '">' + '<img alt="Proto-little" src="' + image + '">' + '</a><br>' + text
           items.push item
         end
       end
