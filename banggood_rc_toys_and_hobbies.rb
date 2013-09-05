@@ -16,7 +16,7 @@ class BangGoodRCToysAndHobbies
         if products.size == 0
           raise "Failed to parse HTML."
         end
-        products.each  do |li|
+        products.each do |li|
           item = Hash.new
           item['title'] = li.css('a.name').text
           item['link'] = li.css('a.name')[0]['href']
