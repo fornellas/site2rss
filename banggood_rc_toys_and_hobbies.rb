@@ -22,7 +22,7 @@ class BangGoodRCToysAndHobbies
           item['link'] = li.css('a.name')[0]['href']
           image = li.css('div.pic').css('img')[0]['src']
           price = li.css('a.pri02').text
-          item['description'] = '<div><a href="' + item['link'] + '">' + '<img alt="Product" src="' + image + '"><br><center><b>' + price + '</b></center>' + '</a></div>'
+          item['description'] = '<div><a href="' + item['link'] + '">' + '<img alt="Product" src="' + image + '"><br><b>' + price + '</b>' + '</a></div>'
           items.push item
         end
       end
