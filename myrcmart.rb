@@ -21,7 +21,7 @@ class MyRCMart
           next if 0 == p.size
           item = Hash.new
           item['title'] = p.css('u').text
-          item['link'] = p.css('a')[0]['href']
+          item['link'] = p.css('a')[0]['href'].split('?')[0]
           image = 'http://www.myrcmart.com/' + p.css('img.prodThumb')[0]['src']
           price = p.css('td.main')[1]
           price.css('a').remove 
