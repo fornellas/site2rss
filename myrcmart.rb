@@ -11,7 +11,7 @@ class MyRCMart
     def items
       agent ||= Mechanize.new
       items = Array.new
-      for p in 1..1
+      for p in 1..10
         products = agent.get('http://www.myrcmart.com/products_new.php?page=' + p.to_s).parser.css('table').css('tr').css('td').css('table').css('tr').css('table').css('tr')
         if products.size == 0
           raise "Failed to parse HTML."
