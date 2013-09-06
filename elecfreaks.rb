@@ -20,7 +20,7 @@ class ElecFreaks
         while products.size >= 3
           item = Hash.new
           item['title'] = products[1].css('a').css('strong')[0].text
-          item['link'] = products[0].css('a')[0]['href']
+          item['link'] = products[0].css('a')[0]['href'].split('?')[0]
           image = products[0].css('a img')[0]['src']
           text = products[2].children[0].text
           price = products[1].children[5].text
