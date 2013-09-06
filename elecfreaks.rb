@@ -23,7 +23,8 @@ class ElecFreaks
           item['link'] = products[0].css('a')[0]['href']
           image = products[0].css('a img')[0]['src']
           text = products[2].children[0].text
-          item['description'] = '<a href="' + item['link'] + '">' + '<img alt="Proto-little" src="' + image + '">' + '</a><br>' + text
+          price = products[1].children[5].text
+          item['description'] = '<a href="' + item['link'] + '">' + '<img alt="Proto-little" src="' + image + '">' + '</a><br>' + price + '<br>' + text
           items.push item
           products = products.drop(3)
         end
